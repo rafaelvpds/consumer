@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
-import util.PriceUpdate;
 
 public class Program {
 
@@ -18,7 +17,7 @@ public class Program {
 
 		// percorer minha lista e aumentar o produto em 10%
 
-		listaProdutos.forEach(Product::staticPriceUpdate);
+		listaProdutos.forEach(Product::noStaticPriceUpdate);
 
 		listaProdutos.forEach(System.out::println);
 
