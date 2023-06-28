@@ -18,7 +18,7 @@ public class Program {
 
 		// percorer minha lista e aumentar o produto em 10%
 
-		listaProdutos.forEach(new PriceUpdate());
+		listaProdutos.forEach(Product::staticPriceUpdate);
 
 		listaProdutos.forEach(System.out::println);
 
