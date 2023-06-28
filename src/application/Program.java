@@ -20,9 +20,7 @@ public class Program {
 
 		double factor = 1.1;
 
-		Consumer<Product> updatePrice = p -> p.setPrice(p.getPrice() * factor);
-
-		listaProdutos.forEach(updatePrice);
+		listaProdutos.forEach(p -> p.setPrice(p.getPrice() * factor));
 
 		listaProdutos.forEach(System.out::println);
 
