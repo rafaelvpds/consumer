@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import entities.Product;
 
@@ -17,7 +18,11 @@ public class Program {
 
 		// percorer minha lista e aumentar o produto em 10%
 
-		listaProdutos.forEach(Product::noStaticPriceUpdate);
+		double factor = 1.1;
+
+		Consumer<Product> updatePrice = p -> p.setPrice(p.getPrice() * factor);
+
+		listaProdutos.forEach(updatePrice);
 
 		listaProdutos.forEach(System.out::println);
 

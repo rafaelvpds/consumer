@@ -25,10 +25,6 @@ public class Product {
 		this.price = price;
 	}
 
-	public void noStaticPriceUpdate() {
-		setPrice(getPrice() * 1.1);
-	}
-
 	@Override
 	public String toString() {
 		return "nome = " + nome + ", price = " + String.format("%.2f", price);
